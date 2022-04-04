@@ -1,2 +1,5 @@
 # alx-backend-javascript
-This repository is handling pure Javascript backend engineering
+
+Backend JavaScript Beginning  
+
+MOving forward with real backend
