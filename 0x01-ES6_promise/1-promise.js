@@ -2,7 +2,7 @@ export function handleResponseFromAPI (promise) {
   if (promise) {
     const workDone = {
       status: 200,
-      body: 'Succcess'
+      body: 'Success'
     };
     return Promise.resolve(workDone);
   } else {
