@@ -1,12 +1,12 @@
-export default function handleResponseFromAPI (promise) {
+export function handleResponseFromAPI (promise) {
   if (promise) {
     const workDone = {
-      'status': 200,
-      'body': 'Succcess'
+      status: 200,
+      body: 'Succcess'
     };
-    Promise.resolve(workDone);
+    return Promise.resolve(workDone);
   } else {
     const failed = 'The fake API is not working currently';
-    Promise.reject(failed);
+    return Promise.reject(failed);
   }
 }
