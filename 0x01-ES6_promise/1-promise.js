@@ -5,10 +5,10 @@ export function handleResponseFromAPI (promise) {
         status: 200,
         body: 'Success'
       };
-      return Promise.resolve(workDone);
+      resolve(workDone);
     } else {
       const failed = 'The fake API is not working currently';
-      return Promise.reject(failed);
+      reject(failed);
     }
   });
 }
