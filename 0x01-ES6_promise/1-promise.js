@@ -1,8 +1,8 @@
 export default function handleResponseFromAPI (promise) {
   if (promise) {
     const workDone = {
-      status: 200,
-      body: 'Succcess'
+      'status': 200,
+      'body': 'Succcess'
     };
     Promise.resolve(workDone);
   } else {
