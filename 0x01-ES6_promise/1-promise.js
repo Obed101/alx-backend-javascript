@@ -7,8 +7,7 @@ export function handleResponseFromAPI (promise) {
       };
       resolve(workDone);
     } else {
-      const failed = 'The fake API is not working currently';
-      reject(failed);
+      reject(Error('The fake API is not working currently'));
     }
   });
 }
