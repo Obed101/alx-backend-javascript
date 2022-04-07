@@ -10,7 +10,7 @@ class HolbertonCourse {
     } else {
       throw TypeError('Name must be an string');
     }
-    if (typeof length === 'number') {
+    if (!isNaN(length)) {
       set setLength() {
         this._lenght = lenght;
       }
