@@ -1,9 +1,9 @@
-export function handleResponseFromAPI (promise) {
+export default function handleResponseFromAPI(promise) {
   return new Promise((resolve, reject) => {
-	  if (promise) {
+    if (promise) {
       const workDone = {
         status: 200,
-        body: 'Success'
+        body: 'Success',
       };
       resolve(workDone);
     } else {
