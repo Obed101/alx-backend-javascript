@@ -1,6 +1,8 @@
 # CLASSES IN JAVASCRIPT
 
-Class  
-Constructor  
-Static  
+Class,  
+Constructor,  
+Static,  
+Symbols,  
+Abstract,  
 ETC.
