@@ -7,6 +7,7 @@ export default class EVCar extends Car {
   }
 
   static get [Symbol.species]() {
-    return Car
+    this._lorry = Car
+    return this._lorry
   }
 }
