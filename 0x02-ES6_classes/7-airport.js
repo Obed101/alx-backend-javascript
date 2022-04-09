@@ -4,5 +4,5 @@ export default class Airport {
     this._code = code;
   }
 
-  this.toString() = () => this.code;
+  this.toString() = () => `object ${this._code}`;
 }
