@@ -7,5 +7,5 @@ export default function taskBlock(trueOrFalse) {
     const task2 = false;
   }
 
-  return tasks;
+  return [task, task2];
 }
