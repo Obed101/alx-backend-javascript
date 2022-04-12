@@ -1,3 +1,3 @@
 # DATA ENGINEERING / MANIPULATION IN ES6  
 
-### Arrays Everywhere
+### Arrays, Sets, Maps, etc. Everywhere
