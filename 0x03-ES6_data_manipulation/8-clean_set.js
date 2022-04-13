@@ -1,4 +1,4 @@
-function cleanSet (set, start) {
+export default function cleanSet (set, start) {
   const another = [];
   if (start === '' || typeof start !== 'string') return '';
   set.forEach(element => {
