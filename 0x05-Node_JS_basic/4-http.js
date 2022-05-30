@@ -1,6 +1,7 @@
 const app = require('http');
-http.createServer(function (_, res) {
-  res.write('Hello Holberton School!');
-  res.end();
+app.createServer(function (_, res) {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello Holberton School!');
 }).listen(1245);
 module.exports = app;
