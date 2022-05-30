@@ -5,12 +5,12 @@ function countStudents (file) {
     let students = fs.readFileSync(file, 'utf-8');
     students = students.split('\n').slice(1);
     students.pop();
-    firstName = [];
-    fields = [];
+    const firstName = [];
+    const fields = [];
     const sep = {};
     const sweStudents = [];
     const csStudents = [];
-    fieldList = ['SWE', 'CS'];
+    const fieldList = ['SWE', 'CS'];
     for (const line of students) {
       col = line.split(',');
       firstName.push(col[0]);
@@ -18,7 +18,7 @@ function countStudents (file) {
       col[3] == 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
     }
     console.log(`Number of students: ${students.length}`);
-    for (field of fields) {
+    for (const field of fields) {
       if (sep[field]) {
         sep[field] += 1;
       }else {
