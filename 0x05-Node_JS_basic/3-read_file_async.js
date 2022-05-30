@@ -10,7 +10,6 @@ async function countStudents (file) {
     const sep = {};
     const sweStudents = [];
     const csStudents = [];
-    const fieldList = ['SWE', 'CS'];
     for (const line of students) {
       col = line.split(',');
       firstName.push(col[0]);
