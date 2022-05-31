@@ -16,18 +16,19 @@ async function countStudents (file) {
       fields.push(col[3]);
       col[3] == 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
     }
-    console.log(`Number of students: ${students.length}`);
     for (const field of fields) {
       if (sep[field]) {
         sep[field] += 1;
-      }else {
+      } else {
         sep[field] = 1;
       }
     }
+    console.log(`Number of students: ${students.length}`);
     console.log(`Number of students in CS: ${sep['CS']}. List: ${csStudents.join(', ')}`);
     console.log(`Number of students in SWE: ${sep['SWE']}. List: ${sweStudents.join(', ')}`);
   } catch(err) {
     throw new Error('Cannot load the database');
   }
 }
+countStudents('database.csv')
 module.exports = countStudents;
