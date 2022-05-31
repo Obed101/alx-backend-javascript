@@ -7,7 +7,7 @@ async function countStudents (file) {
     students.pop();
     const firstName = [];
     const fields = [];
-    const sep = {};
+    const count = {};
     const sweStudents = [];
     const csStudents = [];
     for (const line of students) {
@@ -17,18 +17,19 @@ async function countStudents (file) {
       col[3] == 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
     }
     for (const field of fields) {
-      if (sep[field]) {
-        sep[field] += 1;
+      if (count[field]) {
+        count[field] += 1;
       } else {
-        sep[field] = 1;
+        count[field] = 1;
       }
     }
     console.log(`Number of students: ${students.length}`);
-    console.log(`Number of students in CS: ${sep['CS']}. List: ${csStudents.join(', ')}`);
-    console.log(`Number of students in SWE: ${sep['SWE']}. List: ${sweStudents.join(', ')}`);
-  } catch(err) {
+    console.log(`Number of students in CS: ${count['CS']}. List: ${csStudents.join(', ')}`);
+    console.log(`Number of students in SWE: ${count['SWE']}. List: ${sweStudents.join(', ')}`);
+
+    return { students, count, csStudents, sweStudents }
+} catch(err) {
     throw new Error('Cannot load the database');
   }
 }
-countStudents('database.csv')
 module.exports = countStudents;
