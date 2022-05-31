@@ -1,9 +1,8 @@
 const app = require('http');
 
-app.createServer(function (_, res) {
+app.createServer((_, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello Holberton School!');
-});
-app.listen(1245, '127.0.0.1');
+}).listen(1245);
 module.exports = app;
