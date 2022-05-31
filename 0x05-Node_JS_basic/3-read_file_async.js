@@ -11,10 +11,10 @@ async function countStudents (file) {
     const sweStudents = [];
     const csStudents = [];
     for (const line of students) {
-      col = line.split(',');
+      const col = line.split(',');
       firstName.push(col[0]);
       fields.push(col[3]);
-      col[3] == 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
+      col[3] === 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
     }
     for (const field of fields) {
       if (count[field]) {
@@ -24,10 +24,10 @@ async function countStudents (file) {
       }
     }
     console.log(`Number of students: ${students.length}`);
-    console.log(`Number of students in CS: ${count['CS']}. List: ${csStudents.join(', ')}`);
-    console.log(`Number of students in SWE: ${count['SWE']}. List: ${sweStudents.join(', ')}`);
+    console.log(`Number of students in CS: ${count.CS}. List: ${csStudents.join(', ')}`);
+    console.log(`Number of students in SWE: ${count.SWE}. List: ${sweStudents.join(', ')}`);
 
-    return { students, count, csStudents, sweStudents }
+    return { students, count, csStudents, sweStudents };
 } catch(err) {
     throw new Error('Cannot load the database');
   }
