@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-async function countStudents (file) {
+async function countStudents(file) {
   try {
     let students = await fs.promises.readFile(file, 'utf-8');
     students = students.split('\n').slice(1);
@@ -28,7 +28,7 @@ async function countStudents (file) {
     console.log(`Number of students in SWE: ${count.SWE}. List: ${sweStudents.join(', ')}`);
 
     return { students, count, csStudents, sweStudents };
-} catch(err) {
+  } catch (err) {
     throw new Error('Cannot load the database');
   }
 }
