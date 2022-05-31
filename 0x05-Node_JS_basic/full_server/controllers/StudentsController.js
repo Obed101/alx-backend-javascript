@@ -1,7 +1,7 @@
 import readDatabase from '../utils';
 
 class StudentsController {
-  static async getAllStudents(req, res) {
+  static async getAllStudents(_, res) {
     try {
       const data = await readDatabase(process.argv[2]);
       const str1 = 'This is the list of our students\n';

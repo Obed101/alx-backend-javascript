@@ -1,5 +1,6 @@
 class AppController {
-  static getHomePage(req, res) {
+  static getHomePage(_, res) {
+    res.statusCode = 200;
     res.send('Hello Holberton School!');
   }
 }
