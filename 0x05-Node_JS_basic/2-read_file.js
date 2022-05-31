@@ -11,10 +11,10 @@ function countStudents(file) {
     const sweStudents = [];
     const csStudents = [];
     for (const line of students) {
-      let col = line.split(',');
+      const col = line.split(',');
       firstName.push(col[0]);
       fields.push(col[3]);
-      col[3] == 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
+      col[3] === 'SWE' ? sweStudents.push(col[0]) : csStudents.push(col[0]);
     }
     console.log(`Number of students: ${students.length}`);
     for (const field of fields) {
