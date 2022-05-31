@@ -9,8 +9,8 @@ app.get('/', (_, res) => {
 
 app.get('/students', (_, res) => {
   countStudents(process.argv[2]).then((data) => {
-  res.send('This is the list of our students\n');
-  res.send(`Number of students: ${data.students.length}\n`);
+    res.send('This is the list of our students\n');
+    res.send(`Number of students: ${data.students.length}\n`);
     res.send(`Number of students in CS: ${data.count.CS}. List: ${data.csStudents.join(', ')}\n`);
     res.send(`Number of students in SWE: ${data.count.SWE}. List: ${data.sweStudents.join(', ')}`);
     res.end();
