@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (file) {
+function countStudents(file) {
   try {
     let students = fs.readFileSync(file, 'utf-8');
     students = students.split('\n').slice(1);
@@ -10,7 +10,6 @@ function countStudents (file) {
     const sep = {};
     const sweStudents = [];
     const csStudents = [];
-    const fieldList = ['SWE', 'CS'];
     for (const line of students) {
       col = line.split(',');
       firstName.push(col[0]);
@@ -21,13 +20,13 @@ function countStudents (file) {
     for (const field of fields) {
       if (sep[field]) {
         sep[field] += 1;
-      }else {
+      } else {
         sep[field] = 1;
       }
     }
-    console.log(`Number of students in CS: ${sep['CS']}. List: ${csStudents.join(', ')}`);
-    console.log(`Number of students in SWE: ${sep['SWE']}. List: ${sweStudents.join(', ')}`);
-  } catch(err) {
+    console.log(`Number of students in CS: ${sep.CS}. List: ${csStudents.join(', ')}`);
+    console.log(`Number of students in SWE: ${sep.SWE}. List: ${sweStudents.join(', ')}`);
+  } catch (err) {
     throw new Error('Cannot load the database');
   }
 }
