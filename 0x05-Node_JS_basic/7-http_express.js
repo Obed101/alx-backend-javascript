@@ -7,8 +7,8 @@ app.get('/', (_, res) => {
   res.send('Hello Holberton School!');
 }).listen(1245);
 
-app.get('/students', (_, res) => {
-  countStudents(process.argv[2]).then((data) => {
+app.get('/students', async (_, res) => {
+  await countStudents(process.argv[2]).then((data) => {
     res.send('This is the list of our students\n');
     res.send(`Number of students: ${data.students.length}\n`);
     res.send(`Number of students in CS: ${data.count.CS}. List: ${data.csStudents.join(', ')}\n`);
