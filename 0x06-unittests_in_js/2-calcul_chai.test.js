@@ -3,7 +3,7 @@
 const assert = require('assert');
 const calcul = require('./1-calcul');
 let expect = require('chai');
-expect = expect.expect()
+expect = expect.expect();
 
 describe('Testing calculateNumber function with differemt types', function () {
   it('Should return sum of two rounded numbers', () => {
