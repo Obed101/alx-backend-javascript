@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const assert = require('assert');
-const calcul = require('./0-calcul');
+const calcul = require('./1-calcul');
 
 describe('Testing calculateNumber function', function () {
   it('Should return default sum of two rounded numbers', () => {
