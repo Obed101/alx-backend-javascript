@@ -5,7 +5,7 @@ const calcul = require('./1-calcul');
 
 describe('Testing calculateNumber function', function () {
   it('Should return sum of two rounded numbers', () => {
-    assert.equal(calcul(1.2, 1), 2);
+    assert.equal(calcul(1.2, 1.4), 2);
     assert.equal(calcul(300.9, 400), 800);
   });
 });
