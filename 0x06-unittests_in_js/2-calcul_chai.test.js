@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const assert = require('assert');
 const calcul = require('./1-calcul');
 let expect = require('chai');
 expect = expect.expect;
