@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const calcul = require('./1-calcul');
+const calcul = require('./2-calcul_chai');
 let expect = require('chai');
 expect = expect.expect;
 
