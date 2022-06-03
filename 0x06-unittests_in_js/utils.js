@@ -1,3 +1,18 @@
-// module for the utils of sinon
-const sinon = require('sinon');
-
+// module for the utils
+const Utils = {
+  name: 'Obed Amoako',
+  calculateNumber: function (type, a, b) {
+    switch (type) {
+      case 'SUM':
+        return Math.round(a) + Math.round(b);
+      case 'SUBTRACT':
+        return Math.round(a) - Math.round(b);
+      case 'DIVIDE':
+        if (Math.round(b) === 0) {
+          return 'Error';
+        }
+        return Math.round(a) / Math.round(b);
+    }
+  }
+};
+module.exports = Utils;
