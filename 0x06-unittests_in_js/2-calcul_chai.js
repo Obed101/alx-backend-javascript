@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 
-function calculateNumber (type, a, b) {
-  if (type === 'SUM') {
-    return Math.round(a) + Math.round(b);
-  }
-  if (type === 'SUBTRACT') {
-    return Math.round(a) - Math.round(b);
-  }
-  if (type === 'DIVIDE') {
-    return Math.round(a) / Math.round(b);
+function calculateNumber(type, a, b) {
+  switch (type) {
+    case 'SUM':
+      return Math.round(a) + Math.round(b);
+    case 'SUBTRACT':
+      return Math.round(a) - Math.round(b);
+    case 'DIVIDE':
+      if (Math.round(b) === 0) {
+        return 'Error';
+      }
+      return Math.round(a) / Math.round(b);
   }
 }
 

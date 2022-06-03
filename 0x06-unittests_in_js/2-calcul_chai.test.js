@@ -15,4 +15,7 @@ describe('Testing calculateNumber function with differemt types', function () {
   it('Should return division of two rounded numbers', () => {
     expect(calcul('DIVIDE', 90.4, 3.3)).to.equal(30);
   });
+  it('Should return an Error', () => {
+    expect(calcul('DIVIDE', 90.4, 0)).to.equal('Error');
+  });
 });

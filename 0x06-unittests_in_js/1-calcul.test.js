@@ -13,4 +13,7 @@ describe('Testing calculateNumber function with differemt types', function () {
   it('Should return division of two rounded numbers', () => {
     assert.equal(calcul('DIVIDE', 90.4, 3.3), 30);
   });
+  it('Should return division of zero Error', () => {
+    assert.equal(calcul('DIVIDE', 90.4, 0), 'Error');
+  });
 });
