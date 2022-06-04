@@ -6,7 +6,10 @@ const port = 7865;
 app.get('/', (_, res) => {
   res.send('Welcome to the payment system');
 });
-
+app.get('/cart/:id([0-9]+)', (req, res) => {
+  console.log(req.params.id)
+  res.send(`Payments methods for cart ${req.params.id}`);
+});
 app.listen(port, () => {
   console.log(`API available on localhost port ${port}`);
 });
