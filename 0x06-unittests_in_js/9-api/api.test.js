@@ -21,7 +21,7 @@ describe('Testing API endpoints with different values', () => {
     };
     request(options, (_, res, body) => {
       expect(res.statusCode).to.be.below(400);
-      expect(body).to.equal('Payments methods for cart 3');
+      expect(body).to.equal('Payment methods for cart 3');
       done();
     });
   });
