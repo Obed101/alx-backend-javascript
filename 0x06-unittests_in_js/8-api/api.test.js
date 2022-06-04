@@ -4,7 +4,7 @@ const request = require('request');
 describe('Testing homepage (GET /)', () => {
   it('should return the right response message', (done) => {
     const options = {
-      url: 'https://localhost:7865',
+      url: 'http://localhost:7865',
       method: 'GET'
     };
     request(options, (_, res, body) => {
